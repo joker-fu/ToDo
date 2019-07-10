@@ -6,3 +6,4 @@
 4. Retrofit2.6协程方式请求网络
 5. 常用kotlin扩展
 6. AndroidX使用
+7. Jetpack使用 ViewModel LiveData
