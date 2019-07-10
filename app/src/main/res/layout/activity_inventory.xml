@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+
+    <com.joker.core.widget.TitleBar
+            android:id="@id/titleBar"
+            style="@style/TitleBarStyle_TextTextText"
+            app:leftText="清单"
+            app:leftTextColor="@color/white"
+            app:leftDrawable="@null"
+            app:rightText="保存"
+            app:rightTextColor="@color/white"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16"
+            android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterMaxLength="72"
+                app:counterEnabled="true">
+
+            <EditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/black_grace"
+                    android:textColorHint="@color/grey"
+                    android:hint="标题"
+                    android:maxLines="2"
+                    android:maxLength="72"
+                    android:layout_gravity="bottom"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                app:counterMaxLength="512"
+                app:counterEnabled="true">
+
+            <EditText
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/black_grace"
+                    android:textColorHint="@color/grey"
+                    android:minLines="5"
+                    android:maxLines="5"
+                    android:hint="内容"
+                    android:gravity="top"
+                    android:maxLength="512"
+                    android:layout_gravity="bottom"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_16"
+                android:textColor="@color/grey"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:hint="时间："
+                android:layout_gravity="bottom"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation_fade</item>
+        <item name="android:listDivider">@drawable/list_divider</item>
+    </style>
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation_slide" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+    </style>
+
+    <style name="activityAnimation_fade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="BaseDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- 无边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 浮在 Activity 之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 遮盖层 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 动画效果 -->
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
+        <!-- Base.Theme.AppCompat.Light.Dialog.Alert 特有的属性，用于指定默认宽度，这里需要禁用 -->
+        <item name="android:windowMinWidthMajor">0dp</item>
+        <item name="android:windowMinWidthMinor">0dp</item>
+        <!-- 解决 ActionBar 占位导致 Dialog 无法全屏显示的问题 -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- ActionMode覆盖Actionbar，不顶下来 -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="LoadingDialogStyle" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 模糊，默认为true -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 后背景的暗淡度 -->
+        <item name="android:backgroundDimAmount">0.1</item>
+    </style>
+
+    <style name="VerticalLine">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/grey_light</item>
+    </style>
+
+    <style name="HorizontalLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/grey_light</item>
+    </style>
+
+    <!-- TitleBar 样式 -->
+    <style name="TitleBarStyle_BaseStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="titleBarColor">@color/colorPrimary</item>
+        <item name="titleBarHeight">?attr/actionBarSize</item>
+
+        <item name="showBottomLine">true</item>
+        <item name="bottomLineColor">@color/grey_light</item>
+        <item name="bottomShadowHeight">@dimen/dp_1</item>
+
+        <item name="leftTextSize">@dimen/sp_18</item>
+        <item name="leftTextColor">@color/black_grace</item>
+        <item name="centerTextSize">@dimen/sp_18</item>
+        <item name="centerTextColor">@color/black_grace</item>
+        <item name="rightTextSize">@dimen/sp_18</item>
+        <item name="rightTextColor">@color/black_grace</item>
+    </style>
+
+    <style name="TitleBarStyle_NullCustomNull" parent="TitleBarStyle_BaseStyle">
+        <item name="centerType">customView</item>
+    </style>
+
+    <style name="TitleBarStyle_NullTextNull" parent="TitleBarStyle_BaseStyle">
+        <item name="centerType">textView</item>
+    </style>
+
+    <style name="TitleBarStyle_ImageTextNull" parent="TitleBarStyle_BaseStyle">
+        <item name="leftType">imageButton</item>
+        <item name="centerType">textView</item>
+    </style>
+
+    <style name="TitleBarStyle_ImageTextImage" parent="TitleBarStyle_BaseStyle">
+        <item name="leftType">imageButton</item>
+        <item name="centerType">textView</item>
+        <item name="rightType">imageButton</item>
+    </style>
+
+    <style name="TitleBarStyle_TextTextImage" parent="TitleBarStyle_BaseStyle">
+        <item name="leftType">textView</item>
+        <item name="centerType">textView</item>
+        <item name="rightType">imageButton</item>
+    </style>
+
+    <style name="TitleBarStyle_TextTextText" parent="TitleBarStyle_BaseStyle">
+        <item name="leftType">textView</item>
+        <item name="centerType">textView</item>
+        <item name="rightType">textView</item>
+    </style>
+
+    <style name="TitleBarStyle_ImageEditImage" parent="TitleBarStyle_BaseStyle">
+        <item name="leftType">imageButton</item>
+        <item name="centerType">searchView</item>
+        <item name="rightType">imageButton</item>
+    </style>
+
+    <style name="TitleBarStyle_ImageEditText" parent="TitleBarStyle_BaseStyle">
+        <item name="leftType">imageButton</item>
+        <item name="centerType">searchView</item>
+        <item name="rightType">textView</item>
+    </style>
+
+    <style name="TitleBarStyle_ImageEditNull" parent="TitleBarStyle_BaseStyle">
+        <item name="leftType">imageButton</item>
+        <item name="centerType">searchView</item>
+    </style>
+
+</resources>

@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api "androidx.multidex:multidex:$rootProject.multidex_version"
+
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.kotlinx_coroutines_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.kotlinx_coroutines_version"
+    api "org.jetbrains.anko:anko-commons:$rootProject.anko_version"
+
+    kapt "androidx.room:room-compiler:$rootProject.room_version"
+    api "androidx.room:room-runtime:$rootProject.room_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycle_version"
+    api "androidx.lifecycle:lifecycle-runtime:$rootProject.lifecycle_version"
+    api "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycle_version"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycle_ktx_version"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:$rootProject.lifecycle_ktx_version"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycle_ktx_version"
+
+    api "androidx.appcompat:appcompat:$rootProject.appcompat_version"
+    api "com.google.android.material:material:$rootProject.material_version"
+    api "androidx.vectordrawable:vectordrawable:$rootProject.vectordrawable_version"
+    api "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout_version"
+    api "com.google.android:flexbox:$rootProject.flex_version"
+
+    api "com.squareup.retrofit2:retrofit:$rootProject.retrofit_version"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_version"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp_version"
+
+    api "com.google.code.gson:gson:$rootProject.gson_version"
+    api("com.github.bumptech.glide:glide:$rootProject.glide_version") {
+        exclude group: "com.android.support"
+    }
+    kapt "com.github.bumptech.glide:compiler:$rootProject.glide_version"
+
+    api "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.smartrefresh_andx_version"
+    api "com.gyf.immersionbar:immersionbar:$rootProject.immersionbar_version"
+    api "com.wdullaer:materialdatetimepicker:$rootProject.timepicker_version"
+    api "com.yanzhenjie.permission:x:$rootProject.permission_version"
+    api "com.lxj:xpopup:$rootProject.xpopup_version"
+
+    api "com.github.joker-fu:BannerPager:$rootProject.banner_version"
+
+    debugApi "com.github.whataa:pandora:$rootProject.pandora_version"
+    releaseApi "com.github.whataa:pandora-no-op:$rootProject.pandora_no_op_version"
+
+    /*
+    // 友盟统计
+    api 'com.umeng.umsdk:common:2.0.0'
+    api 'com.umeng.umsdk:analytics:8.0.0'
+    //api 'com.umeng.umsdk:utdid:1.1.5.3'
+    //api 'com.umeng.sdk:debug:1.0.0'
+    // 友盟分享
+    api 'com.umeng.umsdk:share-core:6.9.4'
+    api 'com.umeng.umsdk:share-qq:6.9.4'
+    api 'com.umeng.umsdk:share-wx:6.9.4'
+    //api 'com.umeng.sdk:shareboard-widget:6.9.2'
+    */
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.main.center.CenterFragment">
+
+    <com.joker.core.widget.TitleBar
+            android:id="@id/titleBar"
+            style="@style/TitleBarStyle_TextTextText"
+            app:leftText="中心"
+            app:leftTextColor="@color/white"
+            app:leftDrawable="@null"/>
+
+    <Switch
+            android:id="@+id/showContentSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_45"
+            android:padding="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/white"
+            android:textColor="@color/black_grace"
+            android:text="@string/show_inventory_content"/>
+
+    <TextView
+            android:id="@+id/tvLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_45"
+            android:padding="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@color/white"
+            android:textColor="@color/black_grace"
+            android:text="@string/logout"/>
+
+</LinearLayout>

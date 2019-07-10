@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/menu_list"
+            android:icon="@drawable/ic_bottom_menu_task"
+            android:title="主页"/>
+
+    <item
+            android:id="@+id/menu_center"
+            android:icon="@drawable/ic_bottom_menu_tool"
+            android:title="中心"/>
+
+</menu>

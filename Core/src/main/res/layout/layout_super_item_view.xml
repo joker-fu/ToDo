@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:orientation="horizontal">-->
+
+    <ImageView
+        android:id="@+id/ivLeftImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@android:drawable/ic_delete" />
+
+    <LinearLayout
+        android:id="@+id/llLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_0">
+
+        <TextView
+            android:id="@+id/tvLeftLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textColor="@color/black_grace"
+            android:textSize="@dimen/sp_16"
+            tools:text="左侧文本" />
+
+        <TextView
+            android:id="@+id/tvLeftSubLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:textColor="@color/black_grace"
+            android:textSize="@dimen/sp_14"
+            tools:text="左侧子文本" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCenterLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/sp_14"
+        tools:text="中间文本" />
+
+
+    <EditText
+        android:id="@+id/etCenterLabel"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@color/black_grace"
+        android:textColorHint="@color/grey"
+        android:textSize="@dimen/sp_14"
+        tools:hint="EditText"
+        tools:ignore="InefficientWeight"
+        tools:text="EditText" />
+
+    <TextView
+        android:id="@+id/tvRightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/sp_14"
+        tools:text="右侧文本" />
+
+    <Switch
+        android:id="@+id/sbRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/sp_14"
+        tools:text="开关" />
+
+    <ImageView
+        android:id="@+id/ivCenterImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@android:drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/ivRightImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@android:drawable/ic_delete" />
+
+    <!--</LinearLayout>-->
+</merge>

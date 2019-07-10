@@ -1,0 +1,4 @@
+<resources>
+    <string name="titlebar_search_hint">Search</string>
+    <string name="core_data_empty">没有数据哦~</string>
+</resources>
