@@ -35,7 +35,7 @@ class CenterFragment : SimpleFragment() {
     override fun onBindView(view: View?, savedInstanceState: Bundle?) {
         tvLogout.click {
             centerVM.logout()
-            AppManager.manager.removeOthersActivity(currentActivity::class.java)
+            //AppManager.manager.removeOthersActivity(currentActivity::class.java)
             startActivity(Intent(currentActivity, LoginActivity::class.java))
             finish()
         }

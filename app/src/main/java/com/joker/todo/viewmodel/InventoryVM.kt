@@ -2,6 +2,7 @@ package com.joker.todo.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.joker.core.ext.wrap
 import com.joker.core.http.get
 import com.joker.core.recycler.bean.ViewModelAction
 import com.joker.core.viewmodel.BaseViewModel
@@ -14,7 +15,7 @@ import kotlinx.coroutines.launch
  *
  * @author  joker
  * @date    2019/7/10
-*/
+ */
 class InventoryVM : BaseViewModel<ToDoRepository>() {
 
     override val repository: ToDoRepository
@@ -36,7 +37,7 @@ class InventoryVM : BaseViewModel<ToDoRepository>() {
                     inventories.postValue(it?.datas)
                 }
             } catch (e: Exception) {
-                applyStatus(ViewModelAction.fail())
+                applyStatus(ViewModelAction.fail(e.wrap().message))
             }
         }
     }
@@ -49,7 +50,7 @@ class InventoryVM : BaseViewModel<ToDoRepository>() {
                     applyStatus(ViewModelAction.success())
                 }
             } catch (e: Exception) {
-                applyStatus(ViewModelAction.fail())
+                applyStatus(ViewModelAction.fail(e.wrap().message))
             }
         }
     }
@@ -62,7 +63,7 @@ class InventoryVM : BaseViewModel<ToDoRepository>() {
                     applyStatus(ViewModelAction.success())
                 }
             } catch (e: Exception) {
-                applyStatus(ViewModelAction.fail())
+                applyStatus(ViewModelAction.fail(e.wrap().message))
             }
         }
     }
@@ -75,7 +76,7 @@ class InventoryVM : BaseViewModel<ToDoRepository>() {
                     it?.let { res -> onSuccess(res) }
                 }
             } catch (e: Exception) {
-                applyStatus(ViewModelAction.fail())
+                applyStatus(ViewModelAction.fail(e.wrap().message))
             }
         }
     }
@@ -88,7 +89,7 @@ class InventoryVM : BaseViewModel<ToDoRepository>() {
                     onSuccess()
                 }
             } catch (e: Exception) {
-                applyStatus(ViewModelAction.fail())
+                applyStatus(ViewModelAction.fail(e.wrap().message))
             }
         }
     }
