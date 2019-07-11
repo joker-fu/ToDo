@@ -52,15 +52,16 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/loginBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp_16"
-                android:layout_marginRight="@dimen/dp_16"
-                android:background="@color/colorPrimary"
-                android:text="@string/login"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_16" />
+                    android:id="@+id/loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"/>
         </LinearLayout>
     </ScrollView>
 

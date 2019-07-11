@@ -35,15 +35,15 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabNewInventory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginRight="@dimen/dp_16"
-        android:layout_marginBottom="@dimen/dp_16"
-        app:backgroundTintMode="screen"
-        app:fabSize="normal"
-        app:layout_behavior="com.joker.core.widget.FABScrollBehavior"
-        app:srcCompat="@drawable/ic_add_inventory" />
+            android:id="@+id/fabNewInventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16"
+            app:backgroundTintMode="screen"
+            app:fabSize="normal"
+            app:layout_behavior="com.joker.core.widget.FABScrollBehavior"
+            app:srcCompat="@drawable/ic_add_inventory" android:layout_marginEnd="@dimen/dp_16"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

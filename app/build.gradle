@@ -31,7 +31,14 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     
     implementation project(':Core')
-    implementation "org.jetbrains.anko:anko-sdk25:$rootProject.anko_version"
+
+    // Anko Layouts
+    implementation "org.jetbrains.anko:anko-sdk25:$rootProject.anko_version" // sdk15, sdk19, sdk21, sdk23 are also available
+    implementation "org.jetbrains.anko:anko-appcompat-v7:$rootProject.anko_version"
+
+    // Coroutine listeners for Anko Layouts
+    implementation "org.jetbrains.anko:anko-sdk25-coroutines:$rootProject.anko_version"
+    implementation "org.jetbrains.anko:anko-appcompat-v7-coroutines:$rootProject.anko_version"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

@@ -21,7 +21,7 @@
             android:paddingRight="@dimen/dp_16"
             android:paddingTop="@dimen/dp_8"
             android:paddingBottom="@dimen/dp_8"
-            android:elevation="@dimen/dp_10">
+            android:elevation="@dimen/dp_10" android:paddingStart="@dimen/dp_16" android:paddingEnd="@dimen/dp_16">
 
         <TextView
                 android:id="@+id/tvTitle"
@@ -61,7 +61,7 @@
             android:textColor="@color/white"
             android:paddingRight="@dimen/dp_16"
             android:paddingTop="@dimen/dp_8"
-            android:paddingBottom="@dimen/dp_8"/>
+            android:paddingBottom="@dimen/dp_8" android:paddingStart="@dimen/dp_16" android:paddingEnd="@dimen/dp_16"/>
 
     <TextView
             android:id="@+id/tvLeft"
@@ -74,7 +74,7 @@
             android:paddingLeft="@dimen/dp_16"
             android:paddingRight="@dimen/dp_16"
             android:paddingTop="@dimen/dp_8"
-            android:paddingBottom="@dimen/dp_8"/>
+            android:paddingBottom="@dimen/dp_8" android:paddingEnd="@dimen/dp_16" android:paddingStart="@dimen/dp_16"/>
 
 </com.joker.core.widget.SwipeMenuLayout>
 
